@@ -1,8 +1,25 @@
-// stdafx.cpp : 只包括标准包含文件的源文件
-// pacman.pch 将作为预编译头
-// stdafx.obj 将包含预编译类型信息
+// stdafx.h : 标准系统包含文件的包含文件，
+// 或是经常使用但不常更改的
+// 特定于项目的包含文件
+//
 
-#include "stdafx.h"
+#pragma once
 
-// TODO: 在 STDAFX.H 中引用任何所需的附加头文件，
-//而不是在此文件中引用
+#include "targetver.h"
+
+#define WIN32_LEAN_AND_MEAN             // 从 Windows 头中排除极少使用的资料
+// Windows 头文件: 
+#include <windows.h>
+
+// C 运行时头文件
+#include <stdlib.h>
+#include <malloc.h>
+#include <memory.h>
+#include <tchar.h>
+
+
+// TODO:  在此处引用程序需要的其他头文件
+#include <memory>
+#include <vector>
+#include <algorithm>
+#include <functional>
