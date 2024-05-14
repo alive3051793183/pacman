@@ -1,4 +1,3 @@
-//玩家及敌人
 #include "stdafx.h"
 #include <time.h>
 
@@ -11,7 +10,7 @@
 #define D_OFFSET   2             //绘图误差
 #define RD (DISTANCE + D_OFFSET) //绘图范围 12 
 
-//方向枚举
+//方向
 enum TWARDS {
     UP,    // 上
     DOWN,  // 下
@@ -81,7 +80,7 @@ protected:
     virtual void AchiveCtrl();
 };
 
-//玩家
+//玩家对象
 class PacMan : public GObject
 {
 protected:
@@ -123,7 +122,7 @@ public:
 };
 
 // 三种 敌人
-class RedOne : public Enermy //红：强警戒
+class RedOne : public Enermy //红：无警戒
 {
 protected:
     void virtual MakeDecision(bool b);
@@ -148,7 +147,7 @@ public:
 
 };
 
-class YellowOne : public RedOne //黄：无警戒
+class YellowOne : public RedOne //黄：强警戒
 {
 protected:
     void virtual MakeDecision(bool b);
@@ -156,6 +155,6 @@ public:
     void Draw(HDC &hdc);
     YellowOne(int x, int y) : RedOne(x, y)
     {
-        color = RGB(200, 200, 100);
+        color = RGB(255, 128, 0);
     }
 };
